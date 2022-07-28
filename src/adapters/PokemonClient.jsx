@@ -2,7 +2,7 @@ const axios = require('axios')
 
 const PokemonClient = axios.create({
     baseURL: process.env.REACT_APP_POKEMON_API_BASE_URL,
-    timeout: 1000,
+    timeout: 10000,
 });
 
 /*
@@ -26,6 +26,7 @@ export const getPokemonInRange = async (start, end) => {
     for(let id = start; id<=end; id++){
         try{
             const pokemon = await PokemonClient.get(`pokemon/${id}/`);
+            console.log(pokemon)
             pokemons.push(pokemon);
         }catch(err){
             console.log(err, `Cannot fetch pokemon with id ${id}`)
@@ -43,7 +44,7 @@ export const getPokemonInRange = async (start, end) => {
 export const getNRandomPokemons = async (count) => {
     const pokemons = []
     for(let itr = 0; itr<count; itr++){
-        const id = Math.floor(Math.random() * 100)
+        const id = Math.floor(Math.random() * 100)+1
         try{
             const pokemon = await PokemonClient.get(`pokemon/${id}/`);
             pokemons.push(pokemon);

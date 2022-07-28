@@ -1,10 +1,9 @@
 import { getNRandomPokemons } from './adapters/PokemonClient';
+import { Dashboard } from './views/Dashboard';
 
 function App() {
   return (
-    <div>
-      <h1>Pokemons</h1>
-    </div>
+    <Dashboard/>
   );
 }
 
