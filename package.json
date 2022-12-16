@@ -1,7 +1,7 @@
 {
   "name": "pokemon",
   "version": "0.1.0",
-  "homepage": "https://iarshtejay.github.io/pokemon-arsh",
+  "homepage": "https://iarshtejay.github.io/pokemon/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.3",
