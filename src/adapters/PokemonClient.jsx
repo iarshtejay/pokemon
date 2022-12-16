@@ -42,15 +42,14 @@ export const getPokemonInRange = async (start, end) => {
     @description: Get Pokemon by name or id
 */
 export const getNRandomPokemons = async (count) => {
-    const pokemons = []
+    const pokemonReqs = []
     for(let itr = 0; itr<count; itr++){
         const id = Math.floor(Math.random() * 100)+1
         try{
-            const pokemon = await PokemonClient.get(`pokemon/${id}/`);
-            pokemons.push(pokemon);
+            pokemonReqs.push(PokemonClient.get(`pokemon/${id}/`))
         }catch(err){
             console.log(err, `Cannot fetch pokemon with id ${id}`)
         }
     }
-    return pokemons; 
+    return Promise.all(pokemonReqs); 
 }
