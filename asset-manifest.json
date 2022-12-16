@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/pokemon-arsh/static/js/main.5fba2826.js",
-    "index.html": "/pokemon-arsh/index.html",
-    "main.5fba2826.js.map": "/pokemon-arsh/static/js/main.5fba2826.js.map"
+    "main.js": "/pokemon/static/js/main.5fba2826.js",
+    "index.html": "/pokemon/index.html",
+    "main.5fba2826.js.map": "/pokemon/static/js/main.5fba2826.js.map"
   },
   "entrypoints": [
     "static/js/main.5fba2826.js"
